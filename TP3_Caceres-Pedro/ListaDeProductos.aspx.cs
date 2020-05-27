@@ -18,7 +18,11 @@ namespace TP3_Caceres_Pedro
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
                 listaProductos = negocio.listar2();
-
+                List<Articulo> listaArticulo;
+                List<Articulo> prue = new List<Articulo>();
+                listaArticulo = negocio.listar2();
+                Articulo ar = new Articulo();
+                Articulo arti = new Articulo();
 
                 //cboPokemons.Items.Add("Rojo");
                 //cboPokemons.Items.Add("Azul");
@@ -28,9 +32,21 @@ namespace TP3_Caceres_Pedro
                 { //pregunto si es la primera carga de la page
 
 
-
                     //esto es lo que necesitamos para el repeater.
-
+                    repetidor.DataSource = listaProductos;
+                    repetidor.DataBind();
+                }
+                
+                if(Request.QueryString["IdProducto"]!=null)
+                {
+                   var pokeSeleccionado = Convert.ToInt32(Request.QueryString["IdProducto"]);
+                   ar = listaArticulo.Find(J => J.Id == pokeSeleccionado);
+                    if(Session[Session.SessionID + "elemento"]!=null)
+                    {
+                       prue = (List<Articulo>)Session[Session.SessionID + "elemento"];
+                    }
+                    prue.Add(ar);
+                   Session.Add(Session.SessionID + "elemento", prue);
                 }
 
             }
@@ -38,6 +54,19 @@ namespace TP3_Caceres_Pedro
             {
                 throw;
             }
+        }
+        protected void btnargumento_click(object sender, EventArgs e)
+        {
+
+            Button btn = (Button)sender;
+            string args = btn.CommandArgument;
+            
+
+
+
+
+
+
         }
     }
 }

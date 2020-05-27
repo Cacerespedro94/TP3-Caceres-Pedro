@@ -64,8 +64,8 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+            <footer class="bg-dark text-light">
+                <p>&copy; <%: DateTime.Now.Year %> - Tp 3 - Pedro Caceres PROGRAMACION 3</p>
             </footer>
         </div>
 
