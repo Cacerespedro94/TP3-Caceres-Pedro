@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-   public class Carrito
+
+    public class Carrito
     {
-        public Articulo item { get; set; }
+        public Carrito()
+        {
+            item = new List<Articulo>();
+            cantidad = 0;
+            precioTotal = 0;
+        }
+        public List<Articulo> item { get; set; }
         public int cantidad { get; set; }
         public decimal precioTotal { get; set; }
     }

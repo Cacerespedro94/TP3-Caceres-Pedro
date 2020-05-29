@@ -11,12 +11,12 @@ namespace Negocio
 {
   public  class CarritoNegocio
     {
+
         public void Agregar(Articulo articulos)
         {
-            Carrito car = new Carrito();
-            car.item = articulos;
             
-          
+   
         }
+        
     }
 }

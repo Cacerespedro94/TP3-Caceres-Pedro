@@ -3,12 +3,8 @@
 
 <asp:Content runat="server" ID="ListaProductos" ContentPlaceHolderID="MainContent">
 
-    <h1>Lista Pokemons</h1>
+    <h1>Lista de productos</h1>
 
-    
-    <asp:DropDownList runat="server" ID="cboPokemons" />
-  
-    
     <div class="card-columns" style="margin-left: 10px; margin-right: 10px; ">
 
         <%-- ESTO funciona perfecto, pero lo cambiamos por el repeater para poder usar el 
@@ -16,7 +12,7 @@
             no toma el valor. --%>
             
        
-                <asp:Repeater runat="server" ID="repetidor">
+        <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
                 <div class="card">
                     <img src="<%#Eval("ImagenUrl") %>" class="card-img-top" alt="...">
@@ -24,7 +20,7 @@
                         <h5 class="card-title"><%#Eval("Nombre")%></h5>
                         <p class="card-text"><%#Eval("Descripcion")%></p>
                     </div>
-                    <a id="seleccionar" onclick="prueba()" class="btn btn-primary" href="?idProducto=<%#Eval("Id")%>">Seleccionar</a>
+                 
                    <asp:button id="btnargumento" cssclass="btn btn-primary" text="argumento to back" commandargument='<%#Eval("Id")%>' commandname="idproducto" runat="server" onclick="btnargumento_click" />
                 
                 </div>
