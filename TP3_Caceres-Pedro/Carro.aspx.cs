@@ -13,7 +13,8 @@ namespace TP3_Caceres_Pedro
     public partial class Carro : System.Web.UI.Page
     {
         Articulo ar = new Articulo();
-        Carrito prue = new Carrito();
+        public Carrito prue = new Carrito();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -29,54 +30,17 @@ namespace TP3_Caceres_Pedro
                     prue = (Carrito)Session[Session.SessionID + "elemento"];
                     dgvCarrito.DataSource = prue.item;
                     dgvCarrito.DataBind();
-                    Total.Text = prue.precioTotal.ToString();
-
+                    dgvCarrito.RowStyle.CssClass = "font-weight-bold";
+                   
+                    Total.Text = "$" + prue.precioTotal.ToString();
+                    CanUni.Text = "Estás llevando " + prue.cantidad + " unidades...";
+                    
+                    if(prue.cantidad>0)
+                    { 
+                    dgvCarrito.HeaderRow.CssClass = "bg-primary";
+                    }
                 }
-                //else
-                //{
-                //    if (!IsPostBack)
-                //    {
-                //        var pokeSeleccionado = Convert.ToInt32(Request.QueryString["IdProducto"]);
-                //        ar = listaArticulo.Find(J => J.Id == pokeSeleccionado);
-                //        Session.Add(Session.SessionID + "elemento", ar);
-                //        arti = (Articulo)Session[Session.SessionID + "elemento"];
-
-
-                //    }
-                //    else
-                //    {
-                //        arti = (Articulo)Session[Session.SessionID + "elemento"];
-                //        lblNombre.Text = arti.Nombre;
-                //    }
-
-
-
-                //}
-
-
-                // if (!IsPostBack)
-                // {
-
-                //     var pokeSeleccionado = Convert.ToInt32(Request.QueryString["IdProducto"]);
-                //     ar = listaArticulo.Find(J => J.Id == pokeSeleccionado);
-                //     Session.Add(Session.SessionID + "elemento", ar);
-
-                //     arti = (Articulo)Session[Session.SessionID + "elemento"];
-
-
-                // }
-
-                //else if (Session[Session.SessionID + "elemento"] != null)
-                // {
-                //     Session.Add(Session.SessionID + "elemento", ar);
-                //     arti = (Articulo)Session[Session.SessionID + "elemento"];
-                //     lblNombre.Text = arti.Nombre;
-                // }
-                // else { lblNombre.Text = ""; }
-
             }
-
-
 
             catch (Exception ex)
             {
@@ -84,42 +48,21 @@ namespace TP3_Caceres_Pedro
                 Response.Redirect("Error.aspx");
             }
 
-
-
-
         }
 
         protected void dgvCarrito_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //            ArticuloNegocio negocio = new ArticuloNegocio();
-            //List<Carrito> prue = new List<Carrito>();
 
-            //Carrito car = new Carrito();
-            //List<Articulo> listaArticulo;
-            //Articulo ar = new Articulo();
-            //listaArticulo = negocio.listar2();
-
-            //if (e.CommandName == "Select")
-            //{
-            //    int index = Convert.ToInt32(e.CommandArgument);
-            //    int idProducto = Convert.ToInt32(dgvCarrito.Rows[index].Cells[1].Text);
-            //    var pokeSeleccionado = Convert.ToInt32(Request.QueryString["IdProducto"]);
-            //    ar = listaArticulo.Find(J => J.Id == pokeSeleccionado);
-            //    car = (Carrito)Session[Session.SessionID + "elemento"];
-            //    car.item.Remove(ar);
-            //    Session.Add(Session.SessionID + "elemento", car);
-            //    //Response.Redirect("Carro.aspx");
-            //}
         }
         protected void dgvCarrito_RowCommand(object sender, GridViewCommandEventArgs e)
         {
- 
-
             if (e.CommandName == "Select")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 int idProducto = Convert.ToInt32(dgvCarrito.Rows[index].Cells[0].Text);
                 ar  = prue.item.Find(J => J.Id == idProducto);
+                prue.precioTotal -= ar.Precio;
+                prue.cantidad--;
                 prue.item.Remove(ar);
                 Response.Redirect("Carro.aspx");
             }

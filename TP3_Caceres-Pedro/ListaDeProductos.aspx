@@ -3,9 +3,9 @@
 
 <asp:Content runat="server" ID="ListaProductos" ContentPlaceHolderID="MainContent">
 
-    <h1>Lista de productos</h1>
+    
 
-    <div class="card-columns" style="margin-left: 10px; margin-right: 10px; ">
+    <div class="card-columns mt-5 " style="margin-left: 10px; margin-right: 10px;">
 
         <%-- ESTO funciona perfecto, pero lo cambiamos por el repeater para poder usar el 
             pasaje de parámetros con el CommandArgument de un botón (el PRUEBA), ya que de ESTE modo, 
@@ -14,19 +14,24 @@
        
         <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
-                <div class="card">
+               
+                <div class="card border-dark">
+                    <h3 class="card-title text-center font-weight-bold text-primary"><%#Eval("Nombre")%></h3>
                     <img src="<%#Eval("ImagenUrl") %>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"><%#Eval("Nombre")%></h5>
-                        <p class="card-text"><%#Eval("Descripcion")%></p>
+                        <p class="card-text text-center font-weight-bold"><%#Eval("Descripcion")%></p>
+                        <h4 class="card-text text-center text-danger">$<%#Eval("Precio")%></h4>
+
                     </div>
-                 
-                   <asp:button id="btnargumento" cssclass="btn btn-primary" text="argumento to back" commandargument='<%#Eval("Id")%>' commandname="idproducto" runat="server" onclick="btnargumento_click" />
-                
+                    <div class="row">
+                        <div class="col text-center">
+                   <asp:button ID="btnargumento" CssClass="btn btn-success border border-primary rounded-pill mb-3 float-none " text="Agregar al carrito" commandargument='<%#Eval("Id")%>' commandname="idproducto" runat="server" onclick="btnargumento_click" />
+              </div>
+                        </div> 
                 </div>
             </ItemTemplate>
         </asp:Repeater>
-        <asp:Label ID="lblaaaa" Text="Texto" runat="server" />
+       
                   
 
          </div>
@@ -34,7 +39,8 @@
 
 
         function prueba() {
-       
+           
+            
         }
            
     </script>   

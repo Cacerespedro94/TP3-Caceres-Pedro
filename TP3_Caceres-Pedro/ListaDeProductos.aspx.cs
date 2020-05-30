@@ -83,6 +83,9 @@ namespace TP3_Caceres_Pedro
                     prue.cantidad++;
                     Session.Add(Session.SessionID + "elemento", prue);
                 }
+                {
+                    
+                }
                 
             }
             catch (Exception)
