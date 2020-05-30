@@ -15,7 +15,7 @@
             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
             <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
             <asp:BoundField HeaderText="Precio" DataField="Precio" />
-            <asp:ButtonField  HeaderText="" ButtonType="Link" Text="Eliminar"  CommandName="Select" ControlStyle-CssClass="btn btn-danger" />
+            <asp:ButtonField HeaderText="" ButtonType="Link" ControlStyle-CssClass="btn btn-danger" Text="Eliminar" CommandName="Select" />
         </Columns>
    
     </asp:GridView>

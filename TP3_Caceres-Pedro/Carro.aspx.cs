@@ -118,7 +118,7 @@ namespace TP3_Caceres_Pedro
             if (e.CommandName == "Select")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
-                int idProducto = Convert.ToInt32(dgvCarrito.Rows[index].Cells[1].Text);
+                int idProducto = Convert.ToInt32(dgvCarrito.Rows[index].Cells[0].Text);
                 ar  = prue.item.Find(J => J.Id == idProducto);
                 prue.item.Remove(ar);
                 Response.Redirect("Carro.aspx");
