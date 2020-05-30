@@ -3,49 +3,40 @@
 
 <asp:Content runat="server" ID="ListaProductos" ContentPlaceHolderID="MainContent">
 
-    
+
 
     <div class="card-columns mt-5 " style="margin-left: 10px; margin-right: 10px;">
 
-        <%-- ESTO funciona perfecto, pero lo cambiamos por el repeater para poder usar el 
-            pasaje de parámetros con el CommandArgument de un botón (el PRUEBA), ya que de ESTE modo, 
-            no toma el valor. --%>
-            
-       
         <asp:Repeater runat="server" ID="repetidor">
             <ItemTemplate>
-               
+
                 <div class="card border-dark">
                     <h3 class="card-title text-center font-weight-bold text-primary"><%#Eval("Nombre")%></h3>
                     <img src="<%#Eval("ImagenUrl") %>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text text-center font-weight-bold"><%#Eval("Descripcion")%></p>
                         <h4 class="card-text text-center text-danger">$<%#Eval("Precio")%></h4>
-
                     </div>
                     <div class="row">
                         <div class="col text-center">
-                   <asp:button ID="btnargumento" CssClass="btn btn-success border border-primary rounded-pill mb-3 float-none " text="Agregar al carrito" commandargument='<%#Eval("Id")%>' commandname="idproducto" runat="server" onclick="btnargumento_click" />
-              </div>
-                        </div> 
+                            <asp:Button ID="btnargumento" CssClass="btn btn-success border border-primary rounded-pill mb-3 float-none " Text="Agregar al carrito" CommandArgument='<%#Eval("Id")%>' CommandName="idproducto" runat="server" OnClick="btnargumento_click" />
+                        </div>
+                    </div>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
-       
-                  
 
-         </div>
+    </div>
     <script>
 
-
         function prueba() {
-           
-            
+
+
         }
-           
-    </script>   
+
+    </script>
 
 
-        
-   
+
+
 </asp:Content>

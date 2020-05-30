@@ -41,20 +41,6 @@ namespace TP3_Caceres_Pedro
                 }
             }
 
-            //    if(Request.QueryString["IdProducto"]!=null)
-            //    {
-            //       var articuloSeleccionado = Convert.ToInt32(Request.QueryString["IdProducto"]);
-            //       ar = listaArticulo.Find(J => J.Id == articuloSeleccionado);
-            //        if (Session[Session.SessionID + "elemento"] != null)
-            //        {
-            //            prue = (List<Articulo>)Session[Session.SessionID + "elemento"];
-            //        }
-
-            //        prue.Add(ar);
-            //       Session.Add(Session.SessionID + "elemento", prue);
-            //    }
-
-            //}
             catch (Exception ex)
             {
                 throw;
