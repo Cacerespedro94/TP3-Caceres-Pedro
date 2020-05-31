@@ -7,8 +7,6 @@
             display: none;
         }
 
-        #Tarjeta {
-        }
     </style>
 
     <div class="container mt-5">

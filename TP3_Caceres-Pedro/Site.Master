@@ -49,7 +49,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand text-light" runat="server">Compras online</a>
+                    <a class="navbar-brand text-light" runat="server">COMPRAS ONLINE</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav float-right">

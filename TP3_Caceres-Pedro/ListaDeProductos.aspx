@@ -1,10 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListaDeProductos.aspx.cs" Inherits="TP3_Caceres_Pedro.ListaDeProductos" %>
+﻿<%@ Page Title="" EnableEventValidation="false" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListaDeProductos.aspx.cs" Inherits="TP3_Caceres_Pedro.ListaDeProductos" %>
 
 
 <asp:Content runat="server" ID="ListaProductos" ContentPlaceHolderID="MainContent">
 
-
-
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <asp:TextBox ID="txtBuscador" CssClass="mt-5" runat="server" OnTextChanged="Buscador_TextChanged" />
+                <asp:Button Text="Buscar" CssClass="btn btn-primary" OnClick="Buscador_TextChanged" runat="server" />
+            </div>
+        </div>
+    </div>
     <div class="card-columns mt-5 " style="margin-left: 10px; margin-right: 10px;">
 
         <asp:Repeater runat="server" ID="repetidor">
