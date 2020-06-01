@@ -33,9 +33,14 @@ namespace TP3_Caceres_Pedro
                     dgvCarrito.RowStyle.CssClass = "font-weight-bold";
                    
                     Total.Text = "$" + prue.precioTotal.ToString();
+                    if(prue.cantidad ==1)
+                    {
+                        CanUni.Text = "Estás llevando " + prue.cantidad + " unidad...";
+                    }
+                    else { 
                     CanUni.Text = "Estás llevando " + prue.cantidad + " unidades...";
-                    
-                    if(prue.cantidad>0)
+                    }
+                    if (prue.cantidad>0)
                     { 
                     dgvCarrito.HeaderRow.CssClass = "bg-primary";
                     }

@@ -32,8 +32,6 @@ namespace TP3_Caceres_Pedro
                 {
                     prue = (Carrito)Session[Session.SessionID + "elemento"];
 
-                    
-                    
                 }
                 Conta.Text = prue.cantidad.ToString();
 
@@ -64,7 +62,7 @@ namespace TP3_Caceres_Pedro
 
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }

@@ -10,6 +10,10 @@
             font-size: 18px;
 
         }
+        #btnSeguir{
+            margin-right:2.9em;
+            width: 14.5em;
+        }
     </style>
 
     <div class="container mt-5">
@@ -31,7 +35,7 @@
                     <div class="row">
                         <div class="col text-center">
                             <div class="card text-white bg-success mb-3 mx-auto" style="max-width: 20rem;">
-                                <div class="card-header font-weight-bold">Detalle de compra</div>
+                                <div class="card-header font-weight-bold LABEL">Detalle de compra</div>
                                 <div class="card-body">
                                     <asp:Label ID="CanUni" CssClass="card-text LABEL" Text="" runat="server" />
                                     <h3 class="card-title font-weight-bold text-center">Precio final</h3>
@@ -43,6 +47,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col sm-9"></div>
+            <div class="col sm-3"></div>
+            <a class="btn btn-primary" id="btnSeguir" href="../ListaDeProductos.aspx">Seguir comprando</a>
         </div>
     </div>
     <script>

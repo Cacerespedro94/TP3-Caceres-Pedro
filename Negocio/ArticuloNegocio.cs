@@ -113,7 +113,7 @@ namespace Negocio
                     aux.Categoria.Id = datos.lector.GetInt32(9);
                     aux.Marca.Id = datos.lector.GetInt32(7);
                     aux.ImagenUrl = datos.lector.GetString(4);
-                    aux.Precio = Decimal.Round((decimal)datos.lector["Precio"], 3);
+                    aux.Precio = Decimal.Round((decimal)datos.lector["Precio"], 2);
 
                     listadoArticulo.Add(aux);
                 }    

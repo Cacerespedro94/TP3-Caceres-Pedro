@@ -25,3 +25,12 @@ C:\Users\cacer\Desktop\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.csproj.CoreCo
 C:\Users\cacer\Desktop\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\cacer\Desktop\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.dll
 C:\Users\cacer\Desktop\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.pdb
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\bin\Debug\Negocio.dll
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\bin\Debug\Negocio.pdb
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\bin\Debug\Dominio.dll
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\bin\Debug\Dominio.pdb
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.dll
+C:\Users\cacer\Desktop\Pedro\TP3_Caceres-Pedro\Negocio\obj\Debug\Negocio.pdb

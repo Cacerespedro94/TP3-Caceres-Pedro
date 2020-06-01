@@ -55,7 +55,6 @@
                     <ul class="nav navbar-nav float-right">
                         <li><a class="text-light" runat="server" href="~/ListaDeProductos">Inicio</a></li>
                         <li><a class="text-light" runat="server" href="~/Carro">Carrito de compras</a></li>
-                        <li><a class="text-light" runat="server" href="~/Contact">Contacto</a></li>
                     </ul>
                 </div>
             </div>
