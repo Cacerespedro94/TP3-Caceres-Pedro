@@ -6,7 +6,10 @@
         .oculto {
             display: none;
         }
+        .LABEL{
+            font-size: 18px;
 
+        }
     </style>
 
     <div class="container mt-5">
@@ -30,10 +33,10 @@
                             <div class="card text-white bg-success mb-3 mx-auto" style="max-width: 20rem;">
                                 <div class="card-header font-weight-bold">Detalle de compra</div>
                                 <div class="card-body">
-                                    <asp:Label ID="CanUni" CssClass="card-text" Text="" runat="server" />
-                                    <h5 class="card-title font-weight-bold text-center">Precio final</h5>
+                                    <asp:Label ID="CanUni" CssClass="card-text LABEL" Text="" runat="server" />
+                                    <h3 class="card-title font-weight-bold text-center">Precio final</h3>
 
-                                    <asp:Label ID="Total" CssClass="card-text align-items-center" Text="" runat="server" />
+                                    <asp:Label ID="Total" CssClass="card-text align-items-center LABEL" Text="" runat="server" />
                                 </div>
                             </div>
                         </div>

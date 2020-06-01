@@ -22,15 +22,20 @@ namespace TP3_Caceres_Pedro
             {
 
                 listaProductos = negocio.listar2();
-
-                //List<Articulo> prue = new List<Articulo>();
+                
                 listaArticulo = negocio.listar2();
 
                 Articulo arti = new Articulo();
 
-                //cboPokemons.Items.Add("Rojo");
-                //cboPokemons.Items.Add("Azul");
-                //cboPokemons.Items.Add("Verde");
+
+                if (Session[Session.SessionID + "elemento"] != null)
+                {
+                    prue = (Carrito)Session[Session.SessionID + "elemento"];
+
+                    
+                    
+                }
+                Conta.Text = prue.cantidad.ToString();
 
                 if (!IsPostBack)
                 { //pregunto si es la primera carga de la page
@@ -39,9 +44,11 @@ namespace TP3_Caceres_Pedro
                     //esto es lo que necesitamos para el repeater.
                     repetidor.DataSource = listaProductos;
                     repetidor.DataBind();
+              
                 }
                 else
                 {
+              
                     if (txtBuscador.Text != "")
                     {
                         repetidor.DataSource = (List<Articulo>)Session[Session.SessionID + "filtrado"];
@@ -88,7 +95,7 @@ namespace TP3_Caceres_Pedro
                 {
 
                 }
-
+                Response.Redirect("ListaDeProductos.aspx");
             }
             catch (Exception)
             {
