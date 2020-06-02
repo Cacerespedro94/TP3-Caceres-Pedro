@@ -5,6 +5,22 @@
 <html lang="es">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+       <style>
+        #Imagen {
+            width: 30px;
+            height: 30px;
+            margin-top: 15px;
+          
+        }
+
+        .Contador{
+            
+            margin-top: 15px;
+            
+            font-size: 16px;
+            
+        }
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -55,7 +71,10 @@
                     <ul class="nav navbar-nav float-right">
                         <li><a class="text-light" runat="server" href="~/ListaDeProductos">Inicio</a></li>
                         <li><a class="text-light" runat="server" href="~/Carro">Carrito de compras</a></li>
-                    </ul>
+                        <li> <img id="Imagen" src="https://image.flaticon.com/icons/png/512/833/833486.png" alt="Alternate Text" /> </li>
+                        <li> <asp:Label  ID="Conta" CssClass="Contador font-weight-bold" Text="" runat="server" /></li>
+                       
+                        </ul>
                 </div>
             </div>
         </div>
@@ -70,4 +89,14 @@
 
     </form>
 </body>
+        <script>
+            var Cantidad = parseInt(<%=Conta.Text%>);
+            if (Cantidad == 0) {
+                document.getElementById('<%=Conta.ClientID%>').style.color = "red";
+        }
+        else {
+                document.getElementById('<%=Conta.ClientID%>').style.color = "#5CEA00";
+            }
+
+    </script>
 </html>

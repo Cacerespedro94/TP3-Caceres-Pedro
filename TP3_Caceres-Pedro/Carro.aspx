@@ -6,12 +6,13 @@
         .oculto {
             display: none;
         }
-        .LABEL{
-            font-size: 18px;
 
+        .LABEL {
+            font-size: 18px;
         }
-        #btnSeguir{
-            margin-right:2.9em;
+
+        #btnSeguir {
+            margin-right: 2.9em;
             width: 14.5em;
         }
     </style>

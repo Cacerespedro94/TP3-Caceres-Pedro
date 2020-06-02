@@ -25,16 +25,6 @@ namespace TP3_Caceres_Pedro
                 
                 listaArticulo = negocio.listar2();
 
-                Articulo arti = new Articulo();
-
-
-                if (Session[Session.SessionID + "elemento"] != null)
-                {
-                    prue = (Carrito)Session[Session.SessionID + "elemento"];
-
-                }
-                Conta.Text = prue.cantidad.ToString();
-
                 if (!IsPostBack)
                 { //pregunto si es la primera carga de la page
 

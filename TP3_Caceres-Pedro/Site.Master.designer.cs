@@ -15,6 +15,15 @@ namespace TP3_Caceres_Pedro
     {
 
         /// <summary>
+        /// Control Conta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Conta;
+
+        /// <summary>
         /// Control MainContent.
         /// </summary>
         /// <remarks>

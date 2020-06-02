@@ -52,7 +52,6 @@ namespace TP3_Caceres_Pedro
                 Session["Error" + Session.SessionID] = ex;
                 Response.Redirect("Error.aspx");
             }
-
         }
 
         protected void dgvCarrito_SelectedIndexChanged(object sender, EventArgs e)
